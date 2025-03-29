@@ -58,7 +58,7 @@ Install [go](https://go.dev/) first
 ```bash
 go install github.com/muquit/markdown-toc-go@latest
 ```
-## Download
+# Download
 
 Download pre-compiled binaries from
 [Releases](https://github.com/muquit/markdown-toc-go/releases) page

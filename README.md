@@ -4,7 +4,7 @@
 - [Synopsis](#synopsis)
 - [Features](#features)
 - [Quick Start](#quick-start)
-  - [Download](#download)
+- [Download](#download)
 - [Bulding from source](#bulding-from-source)
 - [Examples](#examples)
 - [Authors](#authors)
@@ -70,7 +70,7 @@ Install [go](https://go.dev/) first
 ```bash
 go install github.com/muquit/markdown-toc-go@latest
 ```
-## Download
+# Download
 
 Download pre-compiled binaries from
 [Releases](https://github.com/muquit/markdown-toc-go/releases) page

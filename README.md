@@ -12,14 +12,14 @@
 
 # Introduction
 
-`markdown-toc-do` is simple multi-platform program to generate table of contents for markdown files. 
+`markdown-toc-go` is a simple multi-platform program to generate table of contents for markdown files. 
 I use it to generate TOC for README.md for my projects in github. 
 I know github shows TOC of README.md but you have
 to click on the list icon to show. I want to see TOC at the top of my README.
 
 # History
 I used to use
-[markdown_helper](https://github.com/BurdetteLamar/markdown_helper), ruby gem to generate TOC
+[markdown_helper](https://github.com/BurdetteLamar/markdown_helper), a ruby gem to generate TOC
 for my markdown files but at times I don't have ruby installed in the systems I'm working on. 
 It also has a bug, for example, say if inside a code block has a commennt with #, it interprets 
 it as header and adds in TOC. Also, project does not seem to be active.
@@ -68,8 +68,7 @@ Version: 1.0.1
 
 # Download
 
-Download pre-built binaries from Releases page.
-
+Download pre-built binaries for various platforms from Releases page.
 
 # Bulding from source
 
@@ -115,6 +114,11 @@ markdown-toc-go -i README.md -t "## Contents"
 Force overwrite existing output file:
 ```
 markdown-toc-go -i README.md -o README_with_toc.md -f
+```
+
+Generate TOC of the test document:
+```
+./markdown-toc-go -i test/TEST.md -o ./TEST.md
 ```
 
 etc.

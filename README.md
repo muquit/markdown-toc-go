@@ -124,7 +124,7 @@ markdown-toc-go -i README.md -o README_with_toc.md -f
 
 Generate TOC of the test document:
 ```
-./markdown-toc-go -i test/TEST.md -o ./TEST.md
+markdown-toc-go -i test/TEST.md -o ./TEST.md
 ```
 
 etc.
@@ -138,4 +138,4 @@ Developed with Claude AI 3.7 Sonnet, working under my guidance and instructions.
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
-<sub>TOC is created by https://github.com/muquit/markdown-toc-go</sub>
+<sub>TOC is created by https://github.com/muquit/markdown-toc-go on Mar-29-2025</sub>

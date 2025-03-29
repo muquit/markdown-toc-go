@@ -3,7 +3,7 @@
 #====================================================================
 README_ORIG=./docs/README.md
 README=./README.md
-BINARY=markdown-toc-go
+BINARY=./markdown-toc-go
 
 all: build gen doc
 
@@ -20,6 +20,7 @@ doc:
 	chmod 600 $(README)
 	$(BINARY) -i $(README_ORIG) -o $(README) -f
 	chmod 444 $(README)
+	$(BINARY) -i ./test/Test.md -o ./Test.md -f
 
 clean:
 	/bin/rm -f $(BINARY)

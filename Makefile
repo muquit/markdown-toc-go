@@ -5,13 +5,13 @@ README_ORIG=./docs/README.md
 README=./README.md
 BINARY=./markdown-toc-go
 
-all: build gen doc
+all: build build_all doc
 
 build:
 	echo "*** Compiling markdon-to-co ...."
 	go build -o $(BINARY)
 
-gen:
+build_all:
 	echo "*** Cross Compiling markdon-to-co ...."
 	go-xbuild-go
 

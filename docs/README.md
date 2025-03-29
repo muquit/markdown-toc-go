@@ -114,6 +114,13 @@ markdown-toc-go -i README.md -o README_with_toc.md -f
 markdown-toc-go -i test/TEST.md -o ./TEST.md
 ```
 
+- By default, a credit line is added at the end of the document. If you do not want to 
+show the credit line, run with the option
+```
+-no-credit
+```
+
+
 etc.
 
 # Authors

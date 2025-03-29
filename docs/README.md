@@ -112,7 +112,7 @@ markdown-toc-go -i README.md -o README_with_toc.md -f
 
 Generate TOC of the test document:
 ```
-./markdown-toc-go -i test/TEST.md -o ./TEST.md
+markdown-toc-go -i test/TEST.md -o ./TEST.md
 ```
 
 etc.

@@ -1,6 +1,6 @@
 # Introduction
 
-`markdown-toc-go` is simple multi-platform program to generate table of contents for markdown files. 
+`markdown-toc-go` is a simple multi-platform program to generate table of contents for markdown files. 
 I use it to generate TOC for README.md for my projects in github. 
 I know github shows TOC of README.md but you have
 to click on the list icon to show. I want to see TOC at the top of my README.

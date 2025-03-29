@@ -53,23 +53,29 @@ Version: 1.0.1
 - Produces a new file with the TOC added at the top
 
 # Quick Start
+Install [go](https://go.dev/) first
 
-# Download
+```bash
+go install github.com/muquit/markdown-toc-go@latest
+```
+## Download
 
-Download pre-built binaries for various platforms from Releases page.
+Download pre-compiled binaries from
+[Releases](https://github.com/muquit/markdown-toc-go/releases) page
 
 # Bulding from source
+Install [go](https://go.dev/) first
 
-   ```
-   git clone https://github.com/yourusername/markdown-toc-go.git
-   cd markdown-toc-go
-   go build
-   ```
+```
+git clone https://github.com/yourusername/markdown-toc-go.git
+cd markdown-toc-go
+go build
+```
 
 (Optional) Move the binary to your PATH:
-   ```
-   sudo mv markdown-toc-go /usr/local/bin/
-   ```
+```
+sudo mv markdown-toc-go /usr/local/bin/
+```
 
 # Examples
 

@@ -79,38 +79,37 @@ sudo mv markdown-toc-go /usr/local/bin/
 
 # Examples
 
-Basic usage. his will generate a new file named `README-with-toc.md` containing the original content plus a table of contents at the top.
+- Basic usage. his will generate a new file named `README-with-toc.md` containing the original content plus a table of contents at the top.
 ```
 markdown-toc-go -i README.md
 ```
 
-Keep README.md in say ./docs directory and generate README.md with TOC in 
+- Keep README.md in say ./docs directory and generate README.md with TOC in 
 the current working directory and overwrite README.md forefully.
 
 ```
 markdown-toc-go -i docs/README.md -o ./README.md -f
 ```
-
-Generate TOC with custom output file:
+- Generate TOC with custom output file:
 ```
 markdown-toc-go -i README.md -o README_with_toc.md
 ```
-Generate TOC including only level 1 and 2 headings:
+- Generate TOC including only level 1 and 2 headings:
 ```
 markdown-toc-go -i README.md -d 2
 ```
 
-Use a custom title for the TOC:
+- Use a custom title for the TOC:
 ```
 markdown-toc-go -i README.md -t "## Contents"
 ```
 
-Force overwrite existing output file:
+- Force overwrite existing output file:
 ```
 markdown-toc-go -i README.md -o README_with_toc.md -f
 ```
 
-Generate TOC of the test document:
+- Generate TOC of the test document:
 ```
 markdown-toc-go -i test/TEST.md -o ./TEST.md
 ```

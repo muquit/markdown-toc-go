@@ -7,6 +7,7 @@
 - [Quick Start](#quick-start)
 - [Download](#download)
 - [Bulding from source](#bulding-from-source)
+- [How I use it](#how-i-use-it)
 - [Examples](#examples)
 - [Authors](#authors)
 - [License](#license)
@@ -18,6 +19,8 @@ I use it to generate TOC for README.md for my projects in github.
 I know github shows TOC of README.md but you have
 to click on the list icon to show. I want to see TOC at the top of my README.
 
+Hope you find this program useful.
+
 # History
 I used to use
 [markdown_helper](https://github.com/BurdetteLamar/markdown_helper), a ruby gem to generate TOC
@@ -25,7 +28,6 @@ for my markdown files but at times I don't have ruby installed in the systems I'
 It also has a bug, for example, say if inside a code block has a commennt with #, it interprets 
 it as header and adds in TOC. Also, project does not seem to be active.
 
-Hope you find this program useful.
 
 # Synopsis
 ```
@@ -96,6 +98,10 @@ Look at `Makefile` for more info.
 ```
 sudo mv markdown-toc-go /usr/local/bin/
 ```
+
+# How I use it
+
+I keep my README.md in ./docs/ directory and generate the README.md with TOC from it. 
 
 # Examples
 

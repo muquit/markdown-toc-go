@@ -1,5 +1,7 @@
 #====================================================================
-# Mar-29-2025
+# Reqquires https://github.com/muquit/go-xbuild-go for cross compiling
+# for other platforms.
+# Mar-29-2025 muquit@muquit.com 
 #====================================================================
 README_ORIG=./docs/README.md
 README=./README.md

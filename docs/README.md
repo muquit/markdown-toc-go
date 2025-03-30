@@ -45,12 +45,18 @@ Options:
 
 Version: 1.0.1
 ```
+
 # Features
 
 - Automatically extracts headings from markdown files
 - Generates GitHub-style anchor links
 - Creates a properly indented TOC with bullet points
 - Produces a new file with the TOC added at the top
+
+# Version
+The current version is 1.0.1
+
+Please look at [ChangeLog](ChangeLog.md) for what has changed in the current version.
 
 # Quick Start
 Install [go](https://go.dev/) first
@@ -71,6 +77,7 @@ git clone https://github.com/yourusername/markdown-toc-go.git
 cd markdown-toc-go
 go build
 ```
+Look at `Makefile` for more info.
 
 (Optional) Move the binary to your PATH:
 ```

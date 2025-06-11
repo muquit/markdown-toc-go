@@ -6,6 +6,12 @@
 README_ORIG=./docs/README.md
 README=./README.md
 BINARY=./markdown-toc-go
+TEST_MD=./test/Test.md
+# v 1.0.3
+GLOSSARY_FILE=./glossary.txt
+TEST_GLOSSARY_FILE=./test/TEST_GLOSSARY.md
+TEST_GLOSSARY_EXPANDED_FILE=./TEST_GLOSSARY_EXPANDED.md
+
 
 all: build build_all doc
 
@@ -20,9 +26,10 @@ build_all:
 doc:
 	echo "*** Generating README.md with TOC ..."
 	chmod 600 $(README)
-	$(BINARY) -i $(README_ORIG) -o $(README) -f
+	$(BINARY) -i $(README_ORIG) -o $(README) --glossary ${GLOSSARY_FILE} -f
 	chmod 444 $(README)
-	$(BINARY) -i ./test/Test.md -o ./Test.md -f
+	$(BINARY) -i ${TEST_MD} -o ./Test.md -f
+	$(BINARY) -i ${TEST_GLOSSARY_FILE} -o ${TEST_GLOSSARY_EXPANDED_FILE} --glossary ${GLOSSARY_FILE} -f
 
 clean:
 	/bin/rm -f $(BINARY)

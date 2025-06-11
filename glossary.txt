@@ -1,0 +1,59 @@
+# Sample Glossary File for markdown-toc-go
+# Format: KEY<spaces>value
+# Use @KEY@ syntax in markdown files for expansion
+
+# Display names (for documentation)
+APP_NAME          MyAwesome App
+APP_VERSION       v2.1.4
+COMPANY_NAME      **Acme Corporation**
+AUTHOR_NAME       John Doe
+
+CLAUDE            [Claude AI 3.7,4 Sonnet](https://claude.ai)
+
+# Technical identifiers (no spaces, no formatting)
+APP_NAME_TECH     myawesome-app
+COMPANY_ORG       acme-corp
+APP_BINARY        myawesome-app
+
+# URLs and links
+BASE_URL          https://api.example.com
+DOCS_URL          [Documentation](https://docs.example.com)
+GITHUB_REPO       [GitHub Repository](https://github.com/@COMPANY_ORG@/@APP_NAME_TECH@)
+API_DOCS          [API Reference](@BASE_URL@/docs)
+
+# Nested references (values that use other keys)
+API_ENDPOINT      @BASE_URL@/v1
+USERS_ENDPOINT    @API_ENDPOINT@/users
+HEALTH_CHECK      @API_ENDPOINT@/health
+
+# Images and badges
+LOGO_IMAGE        ![Company Logo](assets/logo.png)
+BUILD_BADGE       ![Build Status](https://ci.example.com/badge.svg)
+VERSION_BADGE     ![Version](@BASE_URL@/badge/version-@APP_VERSION@-blue.svg)
+LICENSE_BADGE     ![License](https://img.shields.io/badge/license-MIT-green.svg)
+
+# Commands and code (no backticks - context dependent)
+INSTALL_CMD       npm install @COMPANY_ORG@/@APP_NAME_TECH@
+CURL_EXAMPLE      curl -X GET @USERS_ENDPOINT@
+VERSION_CHECK     @APP_BINARY@ --version
+
+# Inline code versions (with backticks for inline use)
+INSTALL_CMD_INLINE    `npm install @COMPANY_ORG@/@APP_NAME_TECH@`
+VERSION_CHECK_INLINE  `@APP_BINARY@ --version`
+
+# Contact information
+SUPPORT_EMAIL     [support@example.com](mailto:support@example.com)
+SLACK_CHANNEL     [#help](https://workspace.slack.com/channels/help)
+
+# File paths and technical details (using technical names)
+CONFIG_FILE       config/@APP_NAME_TECH@.json
+LOG_DIRECTORY     /var/log/@APP_NAME_TECH@/
+PORT_NUMBER       8080
+DATABASE_URL      postgresql://localhost:5432/@APP_NAME_TECH@
+
+# Rich formatted content
+QUICK_START       **Quick Start:** Run @INSTALL_CMD_INLINE@ then @VERSION_CHECK_INLINE@
+STATUS_CHECK      Check system health at @HEALTH_CHECK@
+
+# Complex nested example
+FULL_EXAMPLE      Try @QUICK_START@ and visit @API_DOCS@ for more details

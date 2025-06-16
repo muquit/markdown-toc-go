@@ -25,6 +25,9 @@ build_all:
 	@/bin/rm -f bin/*
 	go-xbuild-go
 
+release:
+	go-xbuild-go -release
+
 doc:
 	echo "*** Generating README.md with TOC ..."
 	chmod 600 $(README)

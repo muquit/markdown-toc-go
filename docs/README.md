@@ -1,9 +1,7 @@
 # Introduction
-
-# Introduction
 `markdown-toc-go` is a simple multi-platform program to generate table of 
 contents for markdown files and expand glossary placeholders for 
-consistent documentation.  I use it to generate TOC for README.md for my 
+consistent documentation.  I use it to generate TOC for `README.md` for my 
 projects in github.  I know github shows TOC of README.md but you 
 have to click on the list icon to show. I want to see TOC at the top of my 
 README.
@@ -14,6 +12,10 @@ painful typing by allowing you to define reusable content once and
 reference it throughout your documentation.  A single global glossary file 
 can be shared across multiple projects for consistent branding, URLs, and 
 common references.
+
+@ASCIIDOC@ has similar feature but it comes with the whole toolchain baggage -
+I do use @ASCIIDOC@ documents.  `markdown-toc-go` is just one 
+static binary and you're done.
 
 Hope you find this program useful.
 
@@ -80,6 +82,32 @@ Version: 1.0.3
 - Pre-TOC content insertion with positioning options
 - Code block detection to avoid parsing headers inside code blocks
 - Overwrite protection with force option
+## Glossary Expansion
+
+Writing documentation often involves typing the same content repeatedly - 
+company names, URLs, version numbers, installation commands, and formatted 
+links. This becomes tedious and error-prone in large README files.
+
+**Common pain points:**
+- Copying the same long URLs multiple times
+- Inconsistent formatting of company names or product names
+- Updating version numbers scattered throughout the document
+- Retyping complex installation commands or code snippets
+- Managing badges, links, and images that appear multiple times
+
+**Glossary expansion solves this by:**
+- **Write once, use everywhere** - Define content once in a glossary file, reference it with `@KEY@` syntax
+- **Consistent formatting** - Company names, links, and formatting stay uniform across the entire document
+- **Easy updates** - Change a URL or version number in one place, it updates everywhere automatically
+- **Reduced errors** - No more typos from retyping the same content
+- **Faster writing** - Focus on content instead of repetitive typing
+
+A single global glossary file can be shared across multiple projects for 
+consistent branding and common references.
+
+**Note:** Glossary keys are not expanded inside code blocks (``` or `` ` ``) 
+to preserve literal code content and examples.
+
 
 # Version
 The current version is 1.0.3
@@ -87,17 +115,11 @@ The current version is 1.0.3
 Please look at [ChangeLog](ChangeLog.md) for what has changed in the current version.
 
 # Quick Start
-Install [go](https://go.dev/) first
-
-```bash
-go install github.com/muquit/markdown-toc-go@latest
-```
-# Download
 
 Download pre-compiled binaries from
 [Releases](https://github.com/muquit/markdown-toc-go/releases) page
 
-# Bulding from source
+# Building from source
 Install [go](https://go.dev/) first
 
 ```
@@ -106,6 +128,11 @@ cd markdown-toc-go
 go build
 ```
 Look at `Makefile` for more info.
+```
+make build
+or
+make build_all
+```
 
 (Optional) Move the binary to your PATH:
 ```
@@ -114,17 +141,19 @@ sudo mv markdown-toc-go /usr/local/bin/
 
 # How I use it
 
-I keep my README.md in `./docs/` directory and generate the README.md with TOC from it. 
+I keep my README.md in `./docs/` directory and generate the `README.md` with TOC from it. 
 
 # Examples
 
-- Basic usage. his will generate a new file named `README-with-toc.md` containing the original content plus a table of contents at the top.
+- Basic usage. This will generate a new file named `README-with-toc.md` 
+containing the original content plus a table of contents at the top.
 ```
 markdown-toc-go -i README.md -glossary glossary.txt
 ```
 
-- Keep README.md in say ./docs directory and generate README.md with TOC in 
-the current working directory and overwrite README.md forcefully.
+- Keep README.md in say `./docs` directory and generate `README.md` with TOC in 
+the current working directory and overwrite README.md forcefully. Please have
+a look at the `Makefile`'s `doc` target.
 
 ```
 markdown-toc-go -i docs/README.md -o ./README.md -glossary glossary.txt -f

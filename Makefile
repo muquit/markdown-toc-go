@@ -17,10 +17,12 @@ all: build build_all doc
 
 build:
 	echo "*** Compiling markdon-to-co ...."
+	@/bin/rm -f bin/*
 	go build -o $(BINARY)
 
 build_all:
 	echo "*** Cross Compiling markdon-to-co ...."
+	@/bin/rm -f bin/*
 	go-xbuild-go
 
 doc:

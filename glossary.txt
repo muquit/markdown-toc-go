@@ -9,6 +9,7 @@ COMPANY_NAME      **Acme Corporation**
 AUTHOR_NAME       John Doe
 
 CLAUDE            [Claude AI 3.7,4 Sonnet](https://claude.ai)
+ASCIIDOC          [AsciiDoc](https://asciidoc.org/)
 
 # Technical identifiers (no spaces, no formatting)
 APP_NAME_TECH     myawesome-app

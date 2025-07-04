@@ -16,12 +16,12 @@ TEST_GLOSSARY_EXPANDED_FILE=./TEST_GLOSSARY_EXPANDED.md
 all: build build_all doc
 
 build:
-	echo "*** Compiling markdon-to-co ...."
+	echo "*** Compiling markdon-toc-go ...."
 	@/bin/rm -f bin/*
 	go build -o $(BINARY)
 
 build_all:
-	echo "*** Cross Compiling markdon-to-co ...."
+	echo "*** Cross Compiling markdon-toc-go ...."
 	@/bin/rm -f bin/*
 	go-xbuild-go
 

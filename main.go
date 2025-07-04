@@ -24,7 +24,7 @@ import (
 // Version information
 const (
 	appName    = "markdown-toc-go"
-	appVersion = "1.0.3"
+	appVersion = "1.0.4"
 )
 
 // Command line flags
@@ -162,6 +162,18 @@ func main() {
 	}
 
 	markdownContent := string(content)
+
+    // --- NEW CODE STARTS HERE ---
+    // Get the directory of the input file for resolving included paths
+    inputDir := filepath.Dir(inputFile)
+
+    // Expand file inclusions
+    markdownContent, err = expandFileInclusions(markdownContent, inputDir, glossary)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error: Failed to expand file inclusions: %v\n", err)
+        os.Exit(1)
+    }
+    // --- NEW CODE ENDS HERE ---
 
 	// Expand glossary terms if glossary is provided
 	if glossary != nil {

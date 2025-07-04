@@ -4,11 +4,12 @@
 # Mar-29-2025 muquit@muquit.com 
 #====================================================================
 README_ORIG=./docs/README.md
+MAIN_MD=./docs/main.md
 README=./README.md
 BINARY=./markdown-toc-go
 TEST_MD=./test/Test.md
 # v 1.0.3
-GLOSSARY_FILE=./glossary.txt
+GLOSSARY_FILE=./docs/glossary.txt
 TEST_GLOSSARY_FILE=./test/TEST_GLOSSARY.md
 TEST_GLOSSARY_EXPANDED_FILE=./TEST_GLOSSARY_EXPANDED.md
 
@@ -27,6 +28,14 @@ build_all:
 
 release:
 	go-xbuild-go -release
+
+doc_new:
+	echo "*** Generating README.md with TOC ..."
+	chmod 600 $(README)
+	$(BINARY) -i $(MAIN_MD) -o $(README) --glossary ${GLOSSARY_FILE} -f
+	chmod 444 $(README)
+	$(BINARY) -i ${TEST_MD} -o ./Test.md -f
+	$(BINARY) -i ${TEST_GLOSSARY_FILE} -o ${TEST_GLOSSARY_EXPANDED_FILE} --glossary ${GLOSSARY_FILE} -f
 
 doc:
 	echo "*** Generating README.md with TOC ..."

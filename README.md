@@ -218,4 +218,4 @@ Developed with [Claude AI 3.7,4 Sonnet](https://claude.ai), working under my gui
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
-<sub>TOC is created by https://github.com/muquit/markdown-toc-go on Jun-14-2025</sub>
+<sub>TOC is created by https://github.com/muquit/markdown-toc-go on Jul-04-2025</sub>

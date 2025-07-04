@@ -142,4 +142,4 @@ Just to make sure we capture all headings.
 If the program works correctly, the TOC should only include the actual headings from this document, not any text that looks like headings inside code blocks, tables, or lists.
 
 ---
-<sub>TOC is created by https://github.com/muquit/markdown-toc-go on Jun-14-2025</sub>
+<sub>TOC is created by https://github.com/muquit/markdown-toc-go on Jul-04-2025</sub>

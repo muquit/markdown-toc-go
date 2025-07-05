@@ -1,7 +1,12 @@
-Added glossary expansion support with `@KEY@` syntax for consistent documentation. Define reusable content like company names, URLs, and version numbers in a glossary file and reference them throughout your markdown. Supports nested references and rich markdown content in values.
+Supports embedding content from other Markdown or plain text files 
+directly into your main input document. This feature is invaluable for 
+breaking down large documents, reusing content snippets, or maintaining 
+distinct sections separately
 
-Please look at [ChangeLog](ChangeLog.md) for details on what has changed in the current version. 
+Please look at [ChangeLog](ChangeLog.md) for details on what has changed 
+in the current version. 
 
-The binaries are cross-compiled with https://github.com/muquit/go-xbuild-go. Do not forget to check checksums of the archives before using.
+The binaries are cross-compiled with https://github.com/muquit/go-xbuild-go.
+Do not forget to check checksums of the archives before using.
 
 Thanks.

@@ -37,14 +37,6 @@ doc:
 	$(BINARY) -i ${TEST_MD} -o ./Test.md -f
 	$(BINARY) -i ${TEST_GLOSSARY_FILE} -o ${TEST_GLOSSARY_EXPANDED_FILE} --glossary ${GLOSSARY_FILE} -f
 
-doc_old:
-	echo "*** Generating README.md with TOC ..."
-	chmod 600 $(README)
-	$(BINARY) -i $(README_ORIG) -o $(README) --glossary ${GLOSSARY_FILE} -f
-	chmod 444 $(README)
-	$(BINARY) -i ${TEST_MD} -o ./Test.md -f
-	$(BINARY) -i ${TEST_GLOSSARY_FILE} -o ${TEST_GLOSSARY_EXPANDED_FILE} --glossary ${GLOSSARY_FILE} -f
-
 clean:
 	/bin/rm -f $(BINARY)
 	/bin/rm -rf ./bin

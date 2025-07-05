@@ -312,7 +312,7 @@ etc.
 
 - First cut: developed with [Claude AI 3.7,4 Sonnet](https://claude.ai), working under my guidance and instructions.
 - Modularized with [Google Gemini 2.5 Flash](https://gemini.google.com/app)
-- Inclusion code was done by [Google Gemini 2.5 Flash](https://gemini.google.com/app) without much hand holding
+- File inclusion code was done by [Google Gemini 2.5 Flash](https://gemini.google.com/app) without much hand holding
 
 
 # License

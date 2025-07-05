@@ -12,6 +12,7 @@ CLAUDE            [Claude AI 3.7,4 Sonnet](https://claude.ai)
 GEMINI_FLASH      [Google Gemini 2.5 Flash](https://gemini.google.com/app)
 ASCIIDOC          [AsciiDoc](https://asciidoc.org/)
 MAIN_MD           [docs/main.d](docs/main.md)
+MARKDOWN_HELPER   [markdown_helper](https://github.com/BurdetteLamar/markdown_helper)
 
 # Technical identifiers (no spaces, no formatting)
 APP_NAME_TECH     myawesome-app

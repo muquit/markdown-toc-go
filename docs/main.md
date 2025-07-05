@@ -6,6 +6,7 @@
 ```
 @[:markdown](features.md)
 @[:markdown](glossary_expansion.md)
+@[:markdown](file_inclusion.md)
 @[:markdown](version.md)
 @[:markdown](quick_start.md)
 @[:markdown](build.md)

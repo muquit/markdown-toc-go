@@ -3,7 +3,7 @@ package main
 
 import (
 	"bufio"
-	"io"
+	//"io"
 	"os"
 	"strings"
 )
@@ -94,6 +94,7 @@ func writeOutputFileWithContent(content, outputPath, toc, preTocContent string) 
 // NOTE: This function is largely redundant with writeOutputFileWithContent
 // after the main content is read into a string. We will consolidate this
 // in a later cleanup. For now, it's moved here to keep original behavior.
+/*
 func writeOutputFile(inputPath, outputPath, toc, preTocContent string) error {
 	// Open input file for reading
 	input, err := os.Open(inputPath)
@@ -186,3 +187,4 @@ func writeOutputFile(inputPath, outputPath, toc, preTocContent string) error {
 
 	return writer.Flush()
 }
+*/

@@ -1,0 +1,39 @@
+markdown-toc-go - Generate a table of contents for markdown files
+
+Usage: markdown-toc-go -i input.md [-o output.md] [options]
+
+Options:
+  -d int
+    	Maximum heading depth to include (1-6) (default 6)
+  -depth int
+    	Maximum heading depth to include (1-6) (default 6)
+  -f	Overwrite output file if it exists
+  -force
+    	Overwrite output file if it exists
+  -glossary string
+    	Glossary file for key-value expansion (format: KEY    value)
+  -i string
+    	Input markdown file (required)
+  -input string
+    	Input markdown file (required)
+  -insert-position string
+    	Where to insert pre-TOC content: 'before-title', 'after-title' (default "before-title")
+  -no-credit
+    	Don't add credit line at the end of the file
+  -o string
+    	Output file (default: input-with-toc.md)
+  -output string
+    	Output file (default: input-with-toc.md)
+  -pre-toc string
+    	Content to insert before TOC (badges, etc.)
+  -pre-toc-file string
+    	File containing content to insert before TOC
+  -t string
+    	Title for table of contents (default "## Table Of Contents")
+  -title string
+    	Title for table of contents (default "## Table Of Contents")
+
+Glossary format: KEY<spaces>value (e.g., API_VERSION    v1.2.3)
+Glossary syntax: @KEY@ in markdown will be replaced with value
+
+Version: 1.0.4

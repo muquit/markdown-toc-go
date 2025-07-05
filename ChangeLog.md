@@ -1,7 +1,16 @@
 ## Contents
+- [v1.0.4](#v104)
 - [v1.0.3](#v103)
 - [v1.0.2](#v102)
 - [v1.0.1](#v101)
+
+# v1.0.4
+* Add file inclusion support with `@[:markdown](filename)` syntax.
+* Included files also expand glossary terms.
+* Refactor codebase into modular files (`glossary.go`, `markdown.go`, `output.go`, `includes.go`).
+* Remove redundant internal functions (`extractHeadings`, `writeOutputFile`).
+
+  (Jul-04-2025)
 
 # v1.0.3
 * Add glossary support with `--glossary` option

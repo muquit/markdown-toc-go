@@ -1,0 +1,12 @@
+# Features
+- Automatically extracts headings from markdown files
+- Generates GitHub-style anchor links
+- Creates a properly indented TOC with bullet points
+- Produces a new file with the TOC added at the top
+- **Glossary support**: Expand `@KEY@` placeholders with key-value pairs from external file
+- **Nested references**: Glossary values can reference other glossary keys
+- **Rich content**: Supports links, images, formatting, and code in glossary values
+- Configurable TOC depth (1-6 heading levels)
+- Pre-TOC content insertion with positioning options
+- Code block detection to avoid parsing headers inside code blocks
+- Overwrite protection with force option

@@ -29,7 +29,7 @@ build_all:
 release:
 	go-xbuild-go -release
 
-doc_new:
+doc:
 	echo "*** Generating README.md with TOC ..."
 	chmod 600 $(README)
 	$(BINARY) -i $(MAIN_MD) -o $(README) --glossary ${GLOSSARY_FILE} -f
@@ -37,7 +37,7 @@ doc_new:
 	$(BINARY) -i ${TEST_MD} -o ./Test.md -f
 	$(BINARY) -i ${TEST_GLOSSARY_FILE} -o ${TEST_GLOSSARY_EXPANDED_FILE} --glossary ${GLOSSARY_FILE} -f
 
-doc:
+doc_old:
 	echo "*** Generating README.md with TOC ..."
 	chmod 600 $(README)
 	$(BINARY) -i $(README_ORIG) -o $(README) --glossary ${GLOSSARY_FILE} -f

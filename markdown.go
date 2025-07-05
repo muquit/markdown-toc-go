@@ -3,7 +3,7 @@ package main
 
 import (
 	"fmt"
-	"os"
+	//"os"
 	"bufio"
 	"regexp"
 	"strings"
@@ -78,6 +78,7 @@ func extractHeadingsFromContent(content string, maxDepth int) ([]Heading, error)
 // NOTE: This function is currently redundant as extractHeadingsFromContent is used
 // after reading the entire file. We will remove this in a later cleanup step.
 // For now, it's moved here to keep the original behavior intact.
+/*
 func extractHeadings(filePath string, maxDepth int) ([]Heading, error) {
 	// Open the file
 	file, err := os.Open(filePath)
@@ -142,6 +143,7 @@ func extractHeadings(filePath string, maxDepth int) ([]Heading, error) {
 
 	return headings, nil
 }
+*/
 
 // generateAnchor creates a GitHub-style anchor link from heading text
 func generateAnchor(text string) string {

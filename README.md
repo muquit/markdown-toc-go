@@ -4,6 +4,13 @@
 - [Synopsis](#synopsis)
 - [Features](#features)
   - [Glossary Expansion](#glossary-expansion)
+- [Version](#version)
+- [Quick Start](#quick-start)
+- [Building from source](#building-from-source)
+- [How I use it](#how-i-use-it)
+- [Examples](#examples)
+- [Authors](#authors)
+- [License](#license)
 
 # Introduction
 `markdown-toc-go` is a simple multi-platform program to generate table of 
@@ -116,6 +123,149 @@ consistent branding and common references.
 to preserve literal code content and examples.
 
 
+
+# Version
+The current version is 1.0.4
+
+Please look at [ChangeLog](ChangeLog.md) for what has changed in the current version.
+
+# Quick Start
+
+Download pre-compiled binaries from
+[Releases](https://github.com/muquit/markdown-toc-go/releases) page
+
+
+# Building from source
+Install [go](https://go.dev/) first
+
+```
+git clone https://github.com/yourusername/markdown-toc-go.git
+cd markdown-toc-go
+go build
+```
+Look at `Makefile` for more info.
+```
+make build
+or
+make build_all
+```
+
+(Optional) Move the binary to your PATH:
+```
+sudo mv markdown-toc-go /usr/local/bin/
+```
+
+
+# How I use it
+
+I keep my markdown files in `./docs/` directory and create a separate markdown
+files for each section and include them from [docs/main.d](docs/main.md) and
+and use [docs/main.d](docs/main.md) as the input file with `-i`. Example:
+
+```bash
+./markdown-toc-go -i docs/main.md -o ./README.md --glossary docs/glossary.txt -f
+```
+Here is how the [docs/main.d](docs/main.md) files look like:
+
+```
+@[:markdown](intro.md)
+@[:markdown](history.md)
+@[:markdown](features.md)
+@[:markdown](glossary_expansion.md)
+@[:markdown](version.md)
+@[:markdown](quick_start.md)
+@[:markdown](build.md)
+@[:markdown](how_I_use.md)
+@[:markdown](examples.md)
+@[:markdown](authors.md)
+@[:markdown](license.md)
+```
+**Note:** you do not have to use it that way, you can have one README.md as input
+file.
+
+# Examples
+
+- Basic usage. This will generate a new file named `README-with-toc.md` 
+containing the original content plus a table of contents at the top.
+```
+markdown-toc-go -i README.md -glossary glossary.txt
+```
+
+- Keep README.md in say `./docs` directory and generate `README.md` with TOC in 
+the current working directory and overwrite README.md forcefully. Please have
+a look at the `Makefile`'s `doc` target.
+
+```
+markdown-toc-go -i docs/README.md -o ./README.md -glossary glossary.txt -f
+```
+- Generate TOC with custom output file:
+```
+markdown-toc-go -i README.md -o README_with_toc.md
+```
+- Generate TOC including only level 1 and 2 headings:
+```
+markdown-toc-go -i README.md -d 2
+```
+
+- Use a custom title for the TOC:
+```
+markdown-toc-go -i README.md -t "## Contents"
+```
+- Force overwrite existing output file:
+```
+markdown-toc-go -i README.md -o README_with_toc.md -f
+```
+
+- Generate TOC of the test document:
+```
+markdown-toc-go -i test/TEST.md -o ./TEST.md
+```
+- Generate TOC of the test document by expanding glossary key value
+```
+markdown-toc-go -i test/TEST_GLOSSARY.md -o ./TEST_GLOSSARY_EXPANDED.md
+```
+- Assemble many files with sections in a separate file
+```
+markdown-toc-go -i docs/main.md -o ./README.md
+```
+`docs/main.md` might look like:
+```
+@[:markdown](intro.md)
+@[:markdown](history.md)
+@[:markdown](features.md)
+@[:markdown](glossary_expansion.md)
+@[:markdown](version.md)
+@[:markdown](quick_start.md)
+@[:markdown](build.md)
+@[:markdown](how_I_use.md)
+@[:markdown](examples.md)
+@[:markdown](authors.md)
+@[:markdown](license.md)
+```
+`./docs` directory contains all the files with sections
+
+- By default, a credit line is added at the end of the document. If you do not want to 
+show the credit line, run with the option
+```
+-no-credit
+```
+
+
+
+
+etc.
+
+
+# Authors
+
+- First cut: developed with [Claude AI 3.7,4 Sonnet](https://claude.ai), working under my guidance and instructions.
+- Modularized with [Google Gemini 2.5 Flash](https://gemini.google.com/app)
+- Inclusion code was done by [Google Gemini 2.5 Flash](https://gemini.google.com/app) without much hand holding
+
+
+# License
+
+This project is licensed under the MIT License - see the LICENSE.txt file for details.
 
 
 

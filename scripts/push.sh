@@ -9,7 +9,6 @@
 
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 echo "Branch: ${BRANCH}"
-exit
 
 if [[ -z "${BRANCH}" ]]; then
     echo "Error: Could not determine current branch. Are you in a Git repository?" >&2

@@ -4,6 +4,7 @@
 - Creates a properly indented TOC with bullet points
 - Produces a new file with the TOC added at the top
 - **Glossary support**: Expand `@KEY@` placeholders with key-value pairs from external file
+- **File inlcusion**: supports embedding content from other Markdown or plain text files.
 - **Nested references**: Glossary values can reference other glossary keys
 - **Rich content**: Supports links, images, formatting, and code in glossary values
 - Configurable TOC depth (1-6 heading levels)

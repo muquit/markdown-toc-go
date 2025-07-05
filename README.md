@@ -4,7 +4,7 @@
 - [Synopsis](#synopsis)
 - [Features](#features)
   - [Glossary Expansion](#glossary-expansion)
-- [Version](#version)
+- [Version 1.0.4](#version-104)
 - [Quick Start](#quick-start)
 - [Building from source](#building-from-source)
 - [How I use it](#how-i-use-it)
@@ -124,7 +124,7 @@ to preserve literal code content and examples.
 
 
 
-# Version
+# Version 1.0.4
 The current version is 1.0.4
 
 Please look at [ChangeLog](ChangeLog.md) for what has changed in the current version.
